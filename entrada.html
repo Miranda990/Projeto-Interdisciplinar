@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Depósito - Materiais de Construção</title>
+  <link rel="stylesheet" href="art.css" />
+</head>
+<body>
+  <header>
+    <h1>Depósito de Materiais de Construção</h1>
+  </header>
+
+  <nav>
+    <a href="#produtos">Produtos</a>
+    <a href="entrada.html">Entradas</a>
+    <a href="saida.html">Saídas</a>
+    <a href="fornecedores.html">Fornecedores</a>
+  </nav>
+
+  <div class="container">
+    <section id="produtos">
+      <h2>Produtos</h2>
+      <div class="form-group">
+        <label for="produto_info">Escolha um produto</label>
+        <select id="produto_info" onchange="mostrarDetalhesProduto()"></select>
+      </div>
+      <table id="tabela_produto_info">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Estoque</th>
+            <th>Preço</th>
+            <th>Fornecedor</th>
+          </tr>
+        </thead>
+        <tbody id="detalhes_produto">
+          <tr>
+            <td colspan="5" style="text-align:center">Selecione um produto para ver os detalhes</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+</body>
+</html>

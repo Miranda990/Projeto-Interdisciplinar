@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Depósito - Materiais de Construção</title>
+  <link rel="stylesheet" href="art.css" />
+</head>
+<body>
+  <header>
+    <h1>Depósito de Materiais de Construção</h1>
+  </header>
+
+  <nav>
+    <a href="#produtos">Produtos</a>
+    <a href="entrada.html">Entradas</a>
+    <a href="saida.html">Saídas</a>
+    <a href="fornecedores.html">Fornecedores</a>
+  </nav>
+
+  <div class="container">
+    <section id="produtos">
+      <h2>Produtos</h2>
+      <div class="form-group">
+        <label for="produto_info">Escolha um produto</label>
+        <select id="produto_info" onchange="mostrarDetalhesProduto()"></select>
+      </div>
+      <table id="tabela_produto_info">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Estoque</th>
+            <th>Preço</th>
+            <th>Fornecedor</th>
+          </tr>
+        </thead>
+        <tbody id="detalhes_produto">
+          <tr>
+            <td colspan="5" style="text-align:center">Selecione um produto para ver os detalhes</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="">
+      <h2>Entradas de Estoque</h2>
+      <form action="inserir_entrada.php" method="post">
+        <div class="form-group">
+          <label for="produto">Produto</label>
+          <select id="produto" name="id_produto"></select>
+        </div>
+        <div class="form-group">
+          <label for="quantidade">Quantidade</label>
+          <input type="number" id="quantidade" name="quantidade" min="1" required />
+        </div>
+        <button type="submit">Registrar Entrada</button>
+      </form>
+    </section>
+
+    <section id="saidas">
+      <h2>Saídas de Estoque</h2>
+      <form action="inserir_saida.php" method="post">
+        <div class="form-group">
+          <label for="produto_saida">Produto</label>
+          <select id="produto_saida" name="id_produto"></select>
+        </div>
+        <div class="form-group">
+          <label for="quantidade_saida">Quantidade</label>
+          <input type="number" id="quantidade_saida" name="quantidade" min="1" required />
+        </div>
+        <button type="submit">Registrar Saída</button>
+      </form>
+    </section>
+
+    <section id="fornecedores">
+      <h2>Fornecedores</h2>
+      <form action="inserir_fornecedor.php" method="post">
+        <div class="form-group">
+          <label for="nome_fornecedor">Nome</label>
+          <input type="text" id="nome_fornecedor" name="nome" required />
+        </div>
+        <div class="form-group">
+          <label for="cnpj_fornecedor">CNPJ</label>
+          <input type="text" id="cnpj_fornecedor" name="cnpj" required />
+        </div>
+        <div class="form-group">
+          <label for="telefone_fornecedor">Telefone</label>
+          <input type="text" id="telefone_fornecedor" name="telefone" />
+        </div>
+        <div class="form-group">
+          <label for="email_fornecedor">Email</label>
+          <input type="email" id="email_fornecedor" name="email" />
+        </div>
+        <button type="submit">Adicionar Fornecedor</button>
+      </form>
+
+      <table contenteditable="true">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>CNPJ</th>
+            <th>Telefone</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Construfácil</td>
+            <td>12.345.678/0001-90</td>
+            <td>11987654321</td>
+            <td>contato@construfacil.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
