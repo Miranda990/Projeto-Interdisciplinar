@@ -2,7 +2,7 @@
 
 const produtos = [
   { nome: "Cimento Votoran", categoria: "Cimento", estoque: 100, preco: "R$ 32,50", fornecedor: "Construfácil" },
-  { nome: "Areia Média", categoria: "Areia", estoque: 200, preco: "R$ 18,00", fornecedor: "Areial do Zé" },
+  { nome: "1", categoria: "Areia", estoque: 200, preco: "R$ 18,00", fornecedor: "Areial do Zé" },
   { nome: "Brita 1", categoria: "Brita", estoque: 150, preco: "R$ 22,50", fornecedor: "Pedreira Boa Pedra" },
   { nome: "Tijolo Baiano", categoria: "Tijolos", estoque: 500, preco: "R$ 0,80", fornecedor: "Tijolaria São Jorge" },
   { nome: "Bloco de Concreto", categoria: "Blocos", estoque: 300, preco: "R$ 2,50", fornecedor: "Blocos & Cia" },
